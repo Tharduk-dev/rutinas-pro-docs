@@ -1,18 +1,19 @@
-# 📖 Controla tus Rutinas - Documentación Técnica (DTE)
+# 🗺️ MAPA DOCUMENTAL - CONTROL TUS RUTINAS (rutinas-pro)
 
-Bienvenido al centro de verdad técnica del proyecto **Controla tus Rutinas**. Este portal contiene la definición arquitectónica, de datos y de seguridad para el sistema multiplataforma de gestión de entrenamiento.
+Bienvenido a la Fuente de Verdad (DTE). Esta estructura es modular y obligatoria para todos los agentes y desarrolladores.
 
-## 🎯 Visión del Proyecto
-Desarrollar una aplicación profesional para la creación, ejecución y seguimiento de rutinas de entrenamiento, escalable a nivel multideporte y comunidad.
+## 🏗️ Núcleo del Sistema
+- [Arquitectura Global](./architecture/index.md) - Principios, capas y Clean Architecture.
+- [Modelo de Datos](./database/index.md) - Esquemas de PostgreSQL y relaciones.
+- [Seguridad y Auth](./security/index.md) - Protocolos de Supabase y JWT.
 
-## 🛠️ Stack Tecnológico Oficial
-- **Frontend:** Flutter (Clean Architecture, Feature-based).
-- **Backend:** Node.js + Fastify (controller/service/repository).
-- **Base de Datos:** PostgreSQL (Supabase).
-- **Infraestructura:** Railway, Cloudflare R2, Vercel.
+## 🔌 API & Integraciones
+- [Catálogo de Endpoints](./api/endpoints.md) - Contratos de la API Fastify.
+- [Webhooks e Infra](./infra/index.md) - Configuración de Railway y entornos.
 
-## 🗺️ Mapa Documental
-- [Arquitectura](./architecture/system_overview.md): Visión global y backend.
-- [Base de Datos](./database/schema_overview.md): Modelo relacional y entidades.
-- [Seguridad](./security/jwt_policy.md): Políticas de acceso y roles.
-- [Infraestructura](./infra/environments.md): Configuración de entornos.
+## 📋 Gestión de Evolución
+- [Estado del Proyecto](../estado_del_proyecto.md) - Roadmap y fases operativas.
+- [Registro de Cambios (Log)](./evolution/index.md) - Historial de decisiones técnicas.
+
+---
+**Nota para Agentes:** Consultar siempre la versión web en https://tharduk-dev.github.io/rutinas-pro-docs/ para asegurar coherencia con el código desplegado.
