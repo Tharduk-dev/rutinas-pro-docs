@@ -8,11 +8,11 @@ Bienvenido a la Fuente de Verdad (DTE). Esta estructura es modular y obligatoria
 - [Seguridad y Auth](./security/index.md) - Protocolos de Supabase y JWT.
 
 ## 🔌 API & Integraciones
-- [Catálogo de Endpoints](./api/endpoints.md) - Contratos de la API Fastify.
+- [Catálogo de API](./api/index.md) - Contratos de red y rutas HTTP disponibles.
 - [Webhooks e Infra](./infra/index.md) - Configuración de Railway y entornos.
 
 ## 📋 Gestión de Evolución
-- [Estado del Proyecto](../estado_del_proyecto.md) - Roadmap y fases operativas.
+- [Estado del Proyecto](./estado_del_proyecto.md) - Roadmap y fases operativas.
 - [Registro de Cambios (Log)](./evolution/index.md) - Historial de decisiones técnicas.
 
 ---

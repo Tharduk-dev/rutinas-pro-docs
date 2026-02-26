@@ -1,5 +1,5 @@
-Title: index
-Status: Draft
-Last Updated: 2026-02-24
-Description:
-Initial DTE structural placeholder. Content to be defined when implementation exists.
+# 🔌 API & Integraciones
+
+Índice principal que agrupa los contratos, conectores y directrices para interactuar de forma programática con los servicios Backend de `rutinas-pro`.
+
+- [Catálogo de Endpoints](./endpoints.md) - Contratos de red de todas las rutas HTTP disponibles (`/v1`).
