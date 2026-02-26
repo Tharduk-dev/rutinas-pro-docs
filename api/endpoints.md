@@ -10,5 +10,37 @@ evolution:
 # Catálogo de Endpoints API (v1)
 
 ## Auth
-- **POST `/v1/auth/login`**: Autenticación de usuario mediante Supabase.
-- **GET `/health`**: Estado del servicio.
+
+### **POST `/v1/auth/login`**
+- **Descripción**: Autenticación de usuario generando JWT a través de Supabase.
+- **Auth required**: No
+- **Roles allowed**: Public
+- **Request schema**:
+  ```json
+  {
+    "email": "user@example.com",
+    "password": "secure_password"
+  }
+  ```
+- **Response schema**:
+  ```json
+  {
+    "access_token": "eyJhbGciOiJIUzI...",
+    "user": {
+      "id": "uuid-string",
+      "email": "user@example.com"
+    }
+  }
+  ```
+- **Error codes**:
+  - `400 Bad Request`: Formato de credenciales inválido.
+  - `401 Unauthorized`: Credenciales incorrectas.
+  - `500 Internal Server Error`: Problemas de conexión con Auth Provider.
+
+---
+
+### **GET `/health`**
+- **Descripción**: Validación del estado de conectividad de los servicios.
+- **Auth required**: No
+- **Roles allowed**: Public
+- **Response**: `200 OK`
