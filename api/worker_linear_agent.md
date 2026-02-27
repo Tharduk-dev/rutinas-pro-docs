@@ -23,6 +23,29 @@ El Worker no hardcodea secretos y confía plenamente en la inyección de estas v
 
 La API expone prefijos bajo `/linear`. 
 
+### `GET /linear/issues`
+Recupera el roadmap activo (lista de issues) desde Linear para el equipo configurado en el entorno (`LINEAR_TEAM_ID`).
+
+- **Headers**: 
+  - (Manejado internamente por el Worker)
+- **Request**:
+  - GET (Sin Body)
+- **Response Success (200 OK)**:
+  ```json
+  [
+    {
+      "id": "UUID-del-issue",
+      "identifier": "ENG-1",
+      "title": "Añadir soporte para webhooks",
+      "description": "Detalles del issue...",
+      "state": {
+        "name": "Todo"
+      },
+      "url": "https://linear.app/..."
+    }
+  ]
+  ```
+
 ### `POST /linear/issue`
 Crea un Issue nuevo en el proyecto apuntado por la variable de entorno `LINEAR_TEAM_ID`.
 
