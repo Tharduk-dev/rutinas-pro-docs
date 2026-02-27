@@ -12,7 +12,6 @@ Bienvenido a la Fuente de Verdad (DTE). Esta estructura es modular y obligatoria
 - [Webhooks e Infra](./infra/index.md) - Configuración de Railway y entornos.
 
 ## 📋 Gestión de Evolución
-- [Estado del Proyecto](./estado_del_proyecto.md) - Roadmap y fases operativas.
 - [Registro de Cambios (Log)](./evolution/index.md) - Historial de decisiones técnicas.
 
 ---
