@@ -19,19 +19,23 @@ VARIABLE_NAME=valor_ejemplo
 OTRA_VARIABLE=true
 ```
 
-## 4. Instrucciones Paso a Paso
-[Sigue una numeración estricta y clara. Un solo concepto o comando por paso].
+## 4. Instrucciones Paso a Paso (Modo Principiante)
+>**ATENCIÓN EJECUTOR:** Este manual está dirigido a un usuario humano que podría NO tener contexto técnico. Las instrucciones deben ser microscópicas:
+> - Si instruyes un comando de consola, debes incluir el **código exacto** copiáble y describir **cuál debe ser el output esperado**.
+> - Si instruyes una acción en una interfaz web (ej: Railway, Stripe), debes describir exactamente **dónde hacer click** (ej: *"Navega a la esquina superior derecha, haz click en 'Settings' -> 'API Keys'"*).
+> - Nunca asumas que el usuario sabe qué hacer con una credencial una vez obtenida.
 
-1. **Abre la terminal en la raíz del proyecto.**
-2. **Instala las dependencias necesarias:**
+### Paso 1: [Acción Clara - Ej: Levantar Docker]
+1. Abre tu terminal y asegúrate de estar en la ruta `[RUTA EXACTA]`.
+2. Ejecuta el siguiente comando:
    ```bash
-   npm install
+   [COMANDO_EXACTO]
    ```
-3. **Inicia el proceso principal en modo desarrollo:**
-   ```bash
-   npm run dev
-   ```
-4. **Verificación:** [Cómo sabe el usuario que lo ha hecho bien. Ej: "Verás en consola el mensaje 'Servidor listo'"].
+3. **Comprobación:** Sabrás que ha funcionado si en la consola ves este mensaje:
+   > `[MENSAJE_ESPERADO_EN_CONSOLA]`
+
+### Paso 2: [Siguiente Acción]
+[Continuar numéricamente...]
 
 ## 5. Solución de Problemas Frecuentes (FAQ)
 - **Problema:** [Descripción del error común]
