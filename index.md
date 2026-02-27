@@ -14,5 +14,9 @@ Bienvenido a la Fuente de Verdad (DTE). Esta estructura es modular y obligatoria
 ## 📋 Gestión de Evolución
 - [Registro de Cambios (Log)](./evolution/index.md) - Historial de decisiones técnicas.
 
+## 🧑‍💻 Manuales de Operaciones Humanas (Human-out-of-the-loop)
+- [Setup de API Key de Linear](./manuals/setup_linear_api_token.md) - Instrucciones para generar el token de Linear.
+- [Despliegue de Worker en Railway](./manuals/deploy_worker_railway.md) - Guía para desplegar el microservicio en nube pública.
+
 ---
 **Nota para Agentes:** Consultar siempre la versión web en https://tharduk-dev.github.io/rutinas-pro-docs/ para asegurar coherencia con el código desplegado.
