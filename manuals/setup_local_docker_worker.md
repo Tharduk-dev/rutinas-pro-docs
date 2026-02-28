@@ -11,8 +11,8 @@ Este manual te enseñará a compilar y ejecutar de forma local el Worker (micros
 - [ ] Tener **Docker Desktop** instalado y en ejecución en tu ordenador (deberías ver el icono de la ballena en tu barra de tareas).
 - [ ] Tener la terminal (o consola) abierta.
 
-## 3. Variables de Entorno (Si aplica)
-En principio, para ejecutar la imagen base en local no necesitas variables de entorno complejas, ya que el contenedor utilizará el puerto 8000 por defecto. Sin embargo, si el worker requiere conexión con Linear para tareas avanzadas más adelante, asegúrate de tener tu archivo `.env` configurado dentro de la carpeta correspondiente.
+## 3. Variables de Entorno (Obligatorio)
+Para ejecutar la imagen base en local necesitas inyectar un archivo `.env`. El contenedor utilizará el puerto 8000 por defecto y **fallará de forma segura (Crash / Error 500)** si no detecta las variables de entorno requeridas (ej: `LINEAR_API_KEY`, `LINEAR_TEAM_ID`). Asegúrate de tener tu archivo `.env` configurado dentro de la carpeta `apps/worker_linear_agent`.
 
 ## 4. Instrucciones Paso a Paso (Modo Principiante)
 
@@ -34,9 +34,9 @@ En principio, para ejecutar la imagen base en local no necesitas variables de en
    > `Successfully tagged worker-linear:latest` o `DONE`
 
 ### Paso 3: Levantar el Contenedor (Encender el servidor)
-1. Ahora que tenemos la imagen creada, vamos a encenderla en modo "silencioso" (en segundo plano) para que no bloquee tu terminal. Ejecuta este comando copiándolo y pegándolo:
+1. Ahora que tenemos la imagen creada, vamos a encenderla en modo "silencioso" (en segundo plano) para que no bloquee tu terminal. Además, vamos a indicarle explícitamente a Docker que lea tus variables de entorno con `--env-file`. Ejecuta este comando copiándolo y pegándolo:
    ```bash
-   docker run -d -p 8000:8000 worker-linear
+   docker run -d -p 8000:8000 --env-file .env worker-linear
    ```
 2. **Comprobación:** Sabrás que ha funcionado si en la consola ves un texto muy largo (un código de letras y números), que es el Identificador de tu contenedor recién encendido. Por ejemplo:
    > `a1b2c3d4e5f6...`
