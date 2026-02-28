@@ -42,10 +42,13 @@ Este documento estructura el desarrollo funcional del proyecto "Controla tus Rut
 1. **[x] [RTN-8] Creación del Worker Python:** 
    - Generación de un nuevo servicio en `apps/worker_linear_agent/`.
    - Inicialización de entorno virtual (`requirements.txt` o `poetry`) incluyendo librerías `fastapi`, `uvicorn`, `requests` (para llamadas API externas de Linear) y gestores de variables de entorno.
-2. **[ ] [RTN-9] Despliegue en Railway:**
    - Creación del `Dockerfile` base de Python hiper-reducido (alpine/slim).
    - Generación del archivo `.railwayignore`.
    - Documentación de inyección manual de `LINEAR_API_KEY` en el dashboard de Railway.
+3. **[x] [INC-worker-linear-debug] QA y Depuración del Worker Python (Ciclo PSR-002):**
+   - Resolución de depuración de inyección de entorno (`python-dotenv` y `main.py`).
+   - Implementación estricta de interface contract testing instruida por VESPER.
+   - 3 Edge cases mockeados en `pytest` superados con éxito en la pipeline de validación.
 3. **[x] [RTN-10] Desarrollo de Endpoints Bridge:**
    - `POST /linear/issue`: Endpoint que el Gestor o scripts locales puedan golpear con un JSON básico (title, description, status) y que internamente resuelva las queries a GraphQL/REST de Linear creando el issue y devolviendo el UUID.
    - `PATCH /linear/issue/{id}`: Endpoint para transicionar el estado del issue (`Todo` -> `In Progress` -> `Ready for Review`).
